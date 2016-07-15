@@ -1,0 +1,6 @@
+framework module Pods_ClasspageTests {
+  umbrella header "Pods-ClasspageTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
