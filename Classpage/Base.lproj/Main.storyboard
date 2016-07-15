@@ -94,6 +94,191 @@
             </objects>
             <point key="canvasLocation" x="-253" y="2458"/>
         </scene>
+        <!--Class View Controller-->
+        <scene sceneID="Fqk-GL-9rD">
+            <objects>
+                <viewController id="WbV-fC-NlB" customClass="ClassViewController" customModule="Classpage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PZ6-W1-9jI"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4f-Qj-uUy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJx-iF-BR3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OLi-ci-ceu">
+                                <rect key="frame" x="40" y="84" width="520" height="322"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-G6-B9m">
+                                        <rect key="frame" x="0.0" y="0.0" width="485" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Class Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-WW-swJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="UfD-un-lLi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MAT303 (Differential Equations)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH6-gB-wTQ">
+                                                <rect key="frame" x="85" y="0.0" width="400" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="Oyl-rx-gec"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-Fy-FTT">
+                                        <rect key="frame" x="0.0" y="56" width="470" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Professor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcE-Fu-lev">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="BD0-46-kpZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Luigi Lombardi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ll-Oj-d4K">
+                                                <rect key="frame" x="70" y="0.0" width="400" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="bUZ-GP-mxF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-SM-0hg">
+                                        <rect key="frame" x="0.0" y="111" width="490" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Office Hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-Ib-u8i">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="6gc-5D-PMR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tuesdays 1-2 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-Wf-hR2">
+                                                <rect key="frame" x="90" y="0.0" width="400" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="HsP-mY-VRG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-WV-pA3">
+                                        <rect key="frame" x="0.0" y="166" width="480" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Class Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-zH-AAK">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="64p-xQ-3tx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mon, Wed, Fri 10:00 - 10:53 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh3-mf-HPW">
+                                                <rect key="frame" x="80" y="0.0" width="400" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="P64-AL-r5S"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-1B-Vwx">
+                                        <rect key="frame" x="0.0" y="222" width="417" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Assignment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60l-G7-ynq">
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="117" id="sf4-ZP-4kZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Homework 7 (4/15)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZG-SQ-kvy">
+                                                <rect key="frame" x="117" y="0.0" width="300" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="y2v-g1-dZt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pq2-Tf-boh">
+                                        <rect key="frame" x="0.0" y="277" width="380" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Exam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-uD-7Ga">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="JgV-St-t5a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Final Exam (5/16)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-vV-pMs">
+                                                <rect key="frame" x="80" y="0.0" width="300" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="YNC-Qa-SZR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SHW-SM-0hg" firstAttribute="height" secondItem="VPk-G6-B9m" secondAttribute="height" id="1RC-rf-P11"/>
+                                    <constraint firstItem="g8b-WV-pA3" firstAttribute="height" secondItem="VPk-G6-B9m" secondAttribute="height" id="1Zl-3x-cgd"/>
+                                    <constraint firstItem="Pq2-Tf-boh" firstAttribute="height" secondItem="VPk-G6-B9m" secondAttribute="height" id="O05-fd-QPM"/>
+                                    <constraint firstItem="ZOr-1B-Vwx" firstAttribute="height" secondItem="VPk-G6-B9m" secondAttribute="height" id="Z4w-iJ-sG7"/>
+                                    <constraint firstItem="8ag-Fy-FTT" firstAttribute="height" secondItem="VPk-G6-B9m" secondAttribute="height" id="aRo-vf-CTM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OLi-ci-ceu" firstAttribute="top" secondItem="PZ6-W1-9jI" secondAttribute="bottom" constant="20" id="aEo-wQ-m4c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OLi-ci-ceu" secondAttribute="trailing" constant="20" id="rtw-nO-Mzn"/>
+                            <constraint firstItem="OLi-ci-ceu" firstAttribute="leading" secondItem="PJx-iF-BR3" secondAttribute="leadingMargin" constant="20" id="s0w-Lm-Ax8"/>
+                            <constraint firstItem="b4f-Qj-uUy" firstAttribute="top" secondItem="OLi-ci-ceu" secondAttribute="bottom" constant="150" id="ydB-6U-VGU"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lLw-NC-ZW5">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="iSW-ie-tED">
+                            <connections>
+                                <segue destination="tbG-gh-eTD" kind="presentation" id="iih-rG-ddi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5L-nk-9g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="-276"/>
+        </scene>
         <!--Timeline Table View Controller-->
         <scene sceneID="82I-uI-idk">
             <objects>
@@ -208,6 +393,9 @@
                     <navigationItem key="navigationItem" id="ADg-3j-Eqj">
                         <barButtonItem key="leftBarButtonItem" title="ITS102" id="Ghm-wL-vmv">
                             <color key="tintColor" red="1" green="0.0" blue="0.0095489782947248969" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="dE6-8G-dj6" kind="presentation" id="s4A-8B-vUw"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="edit" id="IDg-So-vyF">
                             <color key="tintColor" red="1" green="0.0" blue="0.0095489782947248969" alpha="1" colorSpace="calibratedRGB"/>
@@ -471,6 +659,24 @@
             </objects>
             <point key="canvasLocation" x="-189" y="919"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="How-v2-qOc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dE6-8G-dj6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ss2-Zh-3pt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WbV-fC-NlB" kind="relationship" relationship="rootViewController" id="8KI-rZ-HJn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S13-6f-8AV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="-240"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chat (2)" width="24" height="24"/>
@@ -483,4 +689,7 @@
         <image name="setting3" width="36" height="36"/>
         <image name="upload" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iih-rG-ddi"/>
+    </inferredMetricsTieBreakers>
 </document>

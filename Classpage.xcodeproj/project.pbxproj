@@ -21,6 +21,7 @@
 		433675991D356F1D00D5B028 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433675981D356F1D00D5B028 /* Post.swift */; };
 		4336759B1D356F3200D5B028 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4336759A1D356F3200D5B028 /* User.swift */; };
 		4336759D1D35880C00D5B028 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4336759C1D35880C00D5B028 /* ListNotesTableViewCell.swift */; };
+		434813201D39610600E0CEC9 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348131F1D39610600E0CEC9 /* ClassViewController.swift */; };
 		43734EA61D36B6DC006F0CEF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43734EA51D36B6DC006F0CEF /* LogInViewController.swift */; };
 		43734EA81D36C761006F0CEF /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43734EA71D36C761006F0CEF /* CommentsViewController.swift */; };
 		43734EAA1D36C77E006F0CEF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43734EA91D36C77E006F0CEF /* Comment.swift */; };
@@ -71,6 +72,7 @@
 		433675981D356F1D00D5B028 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4336759A1D356F3200D5B028 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4336759C1D35880C00D5B028 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
+		4348131F1D39610600E0CEC9 /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		43734EA51D36B6DC006F0CEF /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		43734EA71D36C761006F0CEF /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		43734EA91D36C77E006F0CEF /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				433675951D35601800D5B028 /* TimelineTableViewController.swift */,
 				43734EA51D36B6DC006F0CEF /* LogInViewController.swift */,
 				43734EA71D36C761006F0CEF /* CommentsViewController.swift */,
+				4348131F1D39610600E0CEC9 /* ClassViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				43734EA61D36B6DC006F0CEF /* LogInViewController.swift in Sources */,
 				433675961D35601800D5B028 /* TimelineTableViewController.swift in Sources */,
 				433675991D356F1D00D5B028 /* Post.swift in Sources */,
+				434813201D39610600E0CEC9 /* ClassViewController.swift in Sources */,
 				433675661D3542FF00D5B028 /* Classpage.xcdatamodeld in Sources */,
 				433675921D35546300D5B028 /* ProfileViewController.swift in Sources */,
 				43EBF0C91D389253005678A0 /* commentsTableViewCell.swift in Sources */,
