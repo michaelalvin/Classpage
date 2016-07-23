@@ -29,11 +29,32 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func LogInButton(sender: AnyObject) {
-        self.performSegueWithIdentifier(self.logInToList, sender: nil)
-    }
     
+    @IBAction func createUser(sender: AnyObject) {
+        FIRAuth.auth()?.createUserWithEmail(usernameField.text!, password: passwordField.text!, completion: { user, error in
+            
+            if error != nil{
+                self.login()
+            } else {
+                print("User created")
+                self.login()
+                self.performSegueWithIdentifier(self.logInToList, sender: nil)
+
+            }
+        })
+            }
     
-    @IBAction func SignUpButton(sender: AnyObject) {
-    }
+    func login(){
+        FIRAuth.auth()?.signInWithEmail(usernameField.text!, password: passwordField.text!, completion: { user, error in
+            
+            if error != nil{
+                print("Incorrect")
+            } else {
+                print("Signed in successfully")
+                self.performSegueWithIdentifier(self.logInToList, sender: nil)
+                print((FIRAuth.auth()?.currentUser?.email)!)
+            }
+        })
+    
+}
 }

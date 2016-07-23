@@ -28,6 +28,7 @@
 		43B4F07E1D36964100B7AAB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43B4F07D1D36964100B7AAB1 /* GoogleService-Info.plist */; };
 		43EBF0C71D3882CA005678A0 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433675951D35601800D5B028 /* TimelineTableViewController.swift */; };
 		43EBF0C91D389253005678A0 /* commentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBF0C81D389253005678A0 /* commentsTableViewCell.swift */; };
+		43F1FBD21D430C6B00957301 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1FBD11D430C6B00957301 /* ChangePasswordViewController.swift */; };
 		ABCF34DFAAE30E8A7A4F5BBD /* Pods_ClasspageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3A2FF911D8C3D5EADE7541 /* Pods_ClasspageTests.framework */; };
 		FCE4FA05164893F2079E188E /* Pods_ClasspageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA210E92BFDD091835238D7 /* Pods_ClasspageUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		43734EA91D36C77E006F0CEF /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		43B4F07D1D36964100B7AAB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		43EBF0C81D389253005678A0 /* commentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentsTableViewCell.swift; sourceTree = "<group>"; };
+		43F1FBD11D430C6B00957301 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		CE3A2FF911D8C3D5EADE7541 /* Pods_ClasspageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClasspageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2498E4C94A9BD851B937D8 /* Pods-ClasspageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClasspageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClasspageTests/Pods-ClasspageTests.release.xcconfig"; sourceTree = "<group>"; };
 		E535CADAAD476598AA951DA7 /* Pods-ClasspageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClasspageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClasspageUITests/Pods-ClasspageUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				433675931D35546D00D5B028 /* SettingViewController.swift */,
 				433675951D35601800D5B028 /* TimelineTableViewController.swift */,
 				43734EA51D36B6DC006F0CEF /* LogInViewController.swift */,
+				43F1FBD11D430C6B00957301 /* ChangePasswordViewController.swift */,
 				43734EA71D36C761006F0CEF /* CommentsViewController.swift */,
 				4348131F1D39610600E0CEC9 /* ClassViewController.swift */,
 			);
@@ -495,6 +498,7 @@
 				43734EA81D36C761006F0CEF /* CommentsViewController.swift in Sources */,
 				43734EAA1D36C77E006F0CEF /* Comment.swift in Sources */,
 				4336759D1D35880C00D5B028 /* ListNotesTableViewCell.swift in Sources */,
+				43F1FBD21D430C6B00957301 /* ChangePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
