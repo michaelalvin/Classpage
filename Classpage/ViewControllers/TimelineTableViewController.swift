@@ -77,6 +77,7 @@ class TimelineTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.allowsMultipleSelectionDuringEditing = false
+    
     }
     
     override func didReceiveMemoryWarning() {
