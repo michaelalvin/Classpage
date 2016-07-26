@@ -29,6 +29,11 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backCommentsButton(sender: AnyObject) {
+        
+    }
+    
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)

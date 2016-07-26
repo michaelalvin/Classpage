@@ -14,7 +14,6 @@ struct Post {
     let note: String!
     let ref: FIRDatabaseReference?
     let modificationTime: NSDate
-    
     var comment: [String]?
     
     init(note: String) {
