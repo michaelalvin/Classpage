@@ -15,12 +15,14 @@ struct Post {
     let ref: FIRDatabaseReference?
     let modificationTime: NSDate
     var comment: [String]?
+    let ups: String!
     
     init(note: String) {
         self.note = note
         self.modificationTime = NSDate()
         self.ref = nil
         self.comment = []
+        self.ups = "0"
     }
     
     
@@ -28,12 +30,14 @@ struct Post {
         note = snapshot.value!["note"] as! String
         ref = snapshot.ref
         modificationTime = NSDate()
+        ups = snapshot.value!["ups"] as! String
     }
     
     func toAnyObject() -> [String:AnyObject] {
         return [
             "note": note,
-            "comment" : comment!
+            "comment" : comment!,
+            "ups": ups
         ]
     }
     

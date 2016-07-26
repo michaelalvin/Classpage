@@ -123,6 +123,8 @@ class TimelineTableViewController: UITableViewController {
         
         cell.timeLabel.text = post.modificationTime.convertToString()
         
+        cell.upsLabel.text = post.ups
+        
         return cell
     }
     
