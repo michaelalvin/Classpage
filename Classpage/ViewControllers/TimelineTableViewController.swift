@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import Firebase
 import UIKit
+import Firebase
+
 
 class TimelineTableViewController: UITableViewController {
     
@@ -16,10 +17,10 @@ class TimelineTableViewController: UITableViewController {
     
     let ref = FIRDatabase.database().reference()
     
-    
     @IBAction func commentButton(sender: AnyObject) {
         self.performSegueWithIdentifier("listToComments", sender: self)
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "listToComments"{
@@ -32,6 +33,18 @@ class TimelineTableViewController: UITableViewController {
             
         vc.postObject = object
         }
+    }
+    
+    
+    
+    @IBAction func upButton(sender: AnyObject) {
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let object = items[(indexPath?.item)!]
+        
+        let objectRef = object.ref!.child("ups")
+        
+        objectRef.setValue(String(Int(object.ups)! + 1))
     }
     
    

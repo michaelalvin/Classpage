@@ -19,12 +19,13 @@ class ListNotesTableViewCell: UITableViewCell {
     var counter = 0
     
     @IBAction func upButton(sender: AnyObject) {
-        counter += 1
-        upsLabel.text = String(counter)
+//        counter += 1
+//        upsLabel.text = String(counter)
     }
     
     
     @IBAction func commentButton(sender: AnyObject) {
     }
+    
     
 }

@@ -608,6 +608,7 @@
                                             <state key="normal" image="upload"/>
                                             <connections>
                                                 <action selector="upButton:" destination="eZ1-hq-2SH" eventType="touchUpInside" id="Mmu-Ls-Jww"/>
+                                                <action selector="upButton:" destination="Q3S-GB-3Lq" eventType="touchUpInside" id="reA-pD-0qP"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05f-iO-Dqy">
