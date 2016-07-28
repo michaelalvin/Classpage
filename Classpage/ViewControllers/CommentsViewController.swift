@@ -9,8 +9,8 @@
 import UIKit
 import Firebase
 
+
 class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,14 +21,34 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var postOutlet: UITextView!
     
+    @IBOutlet weak var upsLabelInComment: UILabel!
+    
+    @IBAction func upsButtonInComment(sender: AnyObject) {
+        let objectRef = postObject!.ref!.child("ups")
+        
+        objectRef.setValue(String(Int((postObject?.ups)!)! + 1))
+        
+        updateUps()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         postOutlet.text = postObject?.note
-        
+        upsLabelInComment.text = postObject?.ups
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "myCell2")
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    func updateUps() {
+        upsLabelInComment.text = String(Int((postObject?.ups)!)! + 1)
+    }
+  
     @IBAction func backCommentsButton(sender: AnyObject) {
         
     }
