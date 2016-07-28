@@ -100,6 +100,8 @@ class TimelineTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+    
+        
         ref.queryOrderedByKey().observeEventType(.Value, withBlock:{ snapshot in
             
         var newItems = [Post]()
