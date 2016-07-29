@@ -100,11 +100,9 @@ class TimelineTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-    
-        
-        ref.queryOrderedByKey().observeEventType(.Value, withBlock:{ snapshot in
+        ref.queryOrderedByChild("ups").observeEventType(.Value, withBlock:{ snapshot in
             
-        var newItems = [Post]()
+            var newItems = [Post]()
             
             for item in snapshot.children{
                 let postItem = Post(snapshot: item as! FIRDataSnapshot)
@@ -112,8 +110,23 @@ class TimelineTableViewController: UITableViewController {
             }
             
             self.items = newItems
+            
             self.tableView.reloadData()
         })
+
+//        ref.queryOrderedByKey().observeEventType(.Value, withBlock:{ snapshot in
+//            
+//        var newItems = [Post]()
+//            
+//            for item in snapshot.children{
+//                let postItem = Post(snapshot: item as! FIRDataSnapshot)
+//                newItems.append(postItem)
+//            }
+//            
+//            self.items = newItems
+//            self.tableView.reloadData()
+//        })
+        
     }
 
     override func viewDidDisappear(animated: Bool) {

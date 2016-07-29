@@ -54,6 +54,18 @@ class LogInViewController: UIViewController {
             
             if error != nil{
                 print("Incorrect")
+                
+                let alert = UIAlertController(title: "Error!", message: "This account does not exist, try a different password.",
+                    preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Try Again.",style: .Default) {
+                    (action: UIAlertAction!) -> Void in
+                }
+                
+                alert.addAction(cancelAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+
             } else {
                 print("Signed in successfully")
                 self.performSegueWithIdentifier(self.logInToList, sender: nil)
