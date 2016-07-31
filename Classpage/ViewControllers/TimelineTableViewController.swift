@@ -58,7 +58,7 @@ class TimelineTableViewController: UITableViewController {
             
             let textField = alert.textFields![0]
             
-            let post = Post(note: textField.text!)
+            let post = Post(note: textField.text!, time: NSDate())
             
             self.items.append(post)
             
@@ -109,7 +109,12 @@ class TimelineTableViewController: UITableViewController {
                 newItems.append(postItem)
             }
             
-            self.items = newItems
+            let reverseRandomCollection = newItems.reverse()
+           
+            let reverseArray = Array(reverseRandomCollection)
+            
+            self.items = reverseArray
+            
             
             self.tableView.reloadData()
         })
@@ -149,7 +154,9 @@ class TimelineTableViewController: UITableViewController {
 
         cell.noteLabel.text = post.note
         
-        cell.timeLabel.text = post.modificationTime.convertToString()
+        //cell.timeLabel.text = post.modificationTime.convertToString()
+        
+        cell.timeLabel.text = post.modificationTime
         
         cell.upsLabel.text = post.ups
         

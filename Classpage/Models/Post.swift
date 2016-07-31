@@ -13,13 +13,15 @@ struct Post {
     
     let note: String!
     let ref: FIRDatabaseReference?
-    let modificationTime: NSDate
+    // let modificationTime: NSDate
+    let modificationTime: String!
     var comment: [String]?
     var ups: String!
     
-    init(note: String) {
+    init(note: String, time: NSDate) {
         self.note = note
-        self.modificationTime = NSDate()
+        // self.modificationTime = time
+        self.modificationTime = time.convertToString()
         self.ref = nil
         self.comment = []
         self.ups = "0"
@@ -29,7 +31,8 @@ struct Post {
     init(snapshot: FIRDataSnapshot) {
         note = snapshot.value!["note"] as! String
         ref = snapshot.ref
-        modificationTime = NSDate()
+        // modificationTime = NSDate()
+        modificationTime = snapshot.value!["modificationTime"] as! String
         ups = snapshot.value!["ups"] as! String
     }
     
@@ -37,7 +40,8 @@ struct Post {
         return [
             "note": note,
             "comment" : comment!,
-            "ups": ups
+            "ups": ups,
+            "modificationTime": modificationTime
         ]
     }
     
