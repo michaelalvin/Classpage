@@ -14,7 +14,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     var comments = [String]()
     var postObject: Post?
     let ref = FIRDatabase.database().reference()
@@ -76,6 +75,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         postItemRef.setValue(com)
         
         self.tableView.reloadData()
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,14 +84,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        //        let cell = tableView.dequeueReusableCellWithIdentifier("myCell2", forIndexPath: indexPath) as! UITableViewCell
-        //
-        //        cell.textLabel?.text = commentTextField.text
-        
-        //        let cell = tableView.dequeueReusableCellWithIdentifier("myCell2", forIndexPath: indexPath) as! CommentsTableViewCell
-        //
-        //        cell.commentLabel?.text = commentTextField.text
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell2", forIndexPath: indexPath) as! UITableViewCell
         
         let currentComment = comments[indexPath.row]
@@ -99,7 +91,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = currentComment
         
         return cell
-        
         
     }
     

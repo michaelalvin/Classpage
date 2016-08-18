@@ -13,16 +13,17 @@ class ListNotesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     
-    
     @IBOutlet weak var upsLabel: UILabel!
     
     var counter = 0
     
-    @IBAction func upButton(sender: AnyObject) {
-//        counter += 1
-//        upsLabel.text = String(counter)
-    }
+    var postObject: Post?
     
+    @IBAction func upButton(sender: AnyObject) {
+        let objectReference = postObject!.ref!.child("ups")
+        
+        objectReference.setValue(String(Int(postObject!.ups)! + 1))
+    }
     
     @IBAction func commentButton(sender: AnyObject) {
     }

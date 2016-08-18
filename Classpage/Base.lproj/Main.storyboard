@@ -145,7 +145,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0095489782949999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-ee-W8n">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-ee-W8n">
                                 <rect key="frame" x="25" y="279" width="280" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="• John Doe replied to your post." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYL-aj-vhx">
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnE-4l-6mZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-315" y="1668"/>
+            <point key="canvasLocation" x="497" y="1668"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="fYx-gb-qeK">
@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bch-s4-0u1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253" y="2458"/>
+            <point key="canvasLocation" x="559" y="2458"/>
         </scene>
         <!--Class View Controller-->
         <scene sceneID="Fqk-GL-9rD">
@@ -609,7 +609,6 @@
                                             <state key="normal" image="upload"/>
                                             <connections>
                                                 <action selector="upButton:" destination="eZ1-hq-2SH" eventType="touchUpInside" id="Mmu-Ls-Jww"/>
-                                                <action selector="upButton:" destination="Q3S-GB-3Lq" eventType="touchUpInside" id="reA-pD-0qP"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05f-iO-Dqy">
@@ -640,9 +639,7 @@
                                             </constraints>
                                             <state key="normal" image="chat (2)"/>
                                             <connections>
-                                                <action selector="commentButton:" destination="Q3S-GB-3Lq" eventType="touchUpInside" id="7yQ-pC-VRh"/>
                                                 <action selector="commentButton:" destination="eZ1-hq-2SH" eventType="touchUpInside" id="O9p-cg-fAe"/>
-                                                <segue destination="hcR-8w-dGZ" kind="presentation" identifier="listToComments" id="jqw-k5-off"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-ra-Vyo">
@@ -688,6 +685,7 @@
                                     <outlet property="noteLabel" destination="yXZ-ra-Vyo" id="xEW-lE-sJh"/>
                                     <outlet property="timeLabel" destination="05f-iO-Dqy" id="Uem-s3-SJ2"/>
                                     <outlet property="upsLabel" destination="Sgs-e2-tAZ" id="qxP-SL-Omb"/>
+                                    <segue destination="hcR-8w-dGZ" kind="presentation" identifier="listToComments" id="ZyB-aI-ZNR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -940,7 +938,7 @@
                                 <rect key="frame" x="243" y="455" width="115" height="30"/>
                                 <state key="normal" title="Forgot Password"/>
                                 <connections>
-                                    <segue destination="prx-d7-LRs" kind="presentation" identifier="logInToPassword" id="s3N-0T-4gU"/>
+                                    <segue destination="7dc-qp-L8z" kind="presentation" identifier="logInToPassword" id="s3N-0T-4gU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1011,13 +1009,20 @@
                             <constraint firstItem="vXC-Rz-abW" firstAttribute="centerY" secondItem="o29-sq-9gL" secondAttribute="centerY" id="iZe-EP-FfW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CE6-9L-qss">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="vit-Jc-Ei8">
+                            <connections>
+                                <segue destination="kCG-ft-5MM" kind="presentation" id="rgs-pk-ZhY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="usernameNameField" destination="ap6-lr-pBH" id="apb-xe-we2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icB-bD-pLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2191" y="1811"/>
+            <point key="canvasLocation" x="-1379" y="1811"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="93n-xZ-Pbs">
@@ -1042,7 +1047,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pp-tB-KiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-989" y="1387"/>
+            <point key="canvasLocation" x="-177" y="1387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SdU-XH-gdw">
@@ -1082,6 +1087,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S13-6f-8AV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="351" y="-240"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BHy-MX-a2P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7dc-qp-L8z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMo-cx-0RP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="prx-d7-LRs" kind="relationship" relationship="rootViewController" id="l87-Bo-K8L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CfG-04-pK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2191" y="1811"/>
         </scene>
     </scenes>
     <resources>

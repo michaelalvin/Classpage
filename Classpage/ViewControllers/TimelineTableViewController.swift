@@ -17,37 +17,6 @@ class TimelineTableViewController: UITableViewController {
     
     let ref = FIRDatabase.database().reference()
     
-    @IBAction func commentButton(sender: AnyObject) {
-        self.performSegueWithIdentifier("listToComments", sender: self)
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "listToComments"{
-            
-        let vc = segue.destinationViewController as! CommentsViewController
-            
-        let indexPath = tableView.indexPathForSelectedRow
-            
-        let object = items[(indexPath?.item)!]
-            
-        vc.postObject = object
-        }
-    }
-    
-    
-    
-    @IBAction func upButton(sender: AnyObject) {
-        let indexPath = tableView.indexPathForSelectedRow
-        
-        let object = items[(indexPath?.item)!]
-        
-        let objectRef = object.ref!.child("ups")
-        
-        objectRef.setValue(String(Int(object.ups)! + 1))
-    }
-    
-   
     
     @IBAction func addButton(sender: AnyObject) {
         let alert = UIAlertController(title: "Post", message: "Create a post",
@@ -68,9 +37,7 @@ class TimelineTableViewController: UITableViewController {
             
             self.tableView.reloadData()
             
-            
         }
-        
         
         let cancelAction = UIAlertAction(title: "Cancel",style: .Default) {
             (action: UIAlertAction!) -> Void in
@@ -120,17 +87,6 @@ class TimelineTableViewController: UITableViewController {
         })
 
 //        ref.queryOrderedByKey().observeEventType(.Value, withBlock:{ snapshot in
-//            
-//        var newItems = [Post]()
-//            
-//            for item in snapshot.children{
-//                let postItem = Post(snapshot: item as! FIRDataSnapshot)
-//                newItems.append(postItem)
-//            }
-//            
-//            self.items = newItems
-//            self.tableView.reloadData()
-//        })
         
     }
 
@@ -152,9 +108,9 @@ class TimelineTableViewController: UITableViewController {
         
         let post = items[indexPath.row]
 
-        cell.noteLabel.text = post.note
+        cell.postObject = post
         
-        //cell.timeLabel.text = post.modificationTime.convertToString()
+        cell.noteLabel.text = post.note
         
         cell.timeLabel.text = post.modificationTime
         
@@ -175,6 +131,24 @@ class TimelineTableViewController: UITableViewController {
 
         }
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("listToComments", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "listToComments"{
+            
+            let vc = segue.destinationViewController as! CommentsViewController
+            
+            let indexPath = tableView.indexPathForSelectedRow
+            
+            let object = items[(indexPath?.item)!]
+            
+            vc.postObject = object
+        }
+    }
+    
 }
 
 

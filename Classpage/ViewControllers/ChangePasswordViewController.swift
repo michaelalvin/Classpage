@@ -31,8 +31,32 @@ class ChangePasswordViewController: UIViewController {
         FIRAuth.auth()?.sendPasswordResetWithEmail(usernameNameField.text!, completion: { (error) in
             if error == nil {
                 print("An email with information on how to reset your password has been sent to you.")
+                
+                let alert = UIAlertController(title: "Thanks!", message: "An email with information on how to reset your password has been sent to you.",
+                    preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Got it.",style: .Default) {
+                    (action: UIAlertAction!) -> Void in
+                }
+                
+                alert.addAction(cancelAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+                
             } else {
                 print(error!.localizedDescription)
+                
+                let alert = UIAlertController(title: "Error!", message: "I don't think an account with this username exists.",
+                    preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Try again.",style: .Default) {
+                    (action: UIAlertAction!) -> Void in
+                }
+                
+                alert.addAction(cancelAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+
             }
         })
     }
